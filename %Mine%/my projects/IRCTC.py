@@ -8,6 +8,10 @@ Train = {
 
 lst = []
 
+for i in range(1,101):
+    lst.append(i)
+
+
 class IRCTC:
 
     def welcome(self):
@@ -27,16 +31,14 @@ class IRCTC:
                 sp = input("What is your seat preference [window,middle,aisle] :\n")
                 print(f"pricing of this train according to coach type per person is :\n{pricing}")
                 bp = input("Enter which type of coach you want to book : \n")
-                for i in range(1,101):
-                    lst.append(i)
                 seat = random.choice(lst)
-                lst.remove(seat)
                 info = [f"Name : {n} \nAge : {age} \nGender : {gender} \nSeat preference : {sp} \nCoach type : {bp}\nSeat No. : {seat}\n"]
                 ts.writerow(info)
                 print(f"You have to pay Rs.{pricing.get(bp)} only")
 
             else:
                 q = int(input("For how many persons you want to book ticket :\n"))
+                seat = random.choice(lst)
                 with open ("Ticket.csv","w") as t:
                     ts = csv.writer(t)
                     for i in range(q):
@@ -46,10 +48,7 @@ class IRCTC:
                         sp = input("What is the seat preference of the person [window,middle,aisle] :\n")
                         print(f"pricing of this train according to coach type per person is :\n{pricing}")
                         bp = input("Enter which type of coach the person want to book : \n")
-                        for i in range(1,101):
-                            lst.append(i)
-                        seat = random.choice(lst)
-                        lst.remove(seat)
+                        seat = seat + 1
                         print("\nOk ,Thank you\n")
                         info = [f"Name : {n} \nAge : {age} \nGender : {gender} \nSeat preference : {sp} \nCoach type : {bp}\nSeat No. : {seat}\n"]
                         ts.writerow(info)
