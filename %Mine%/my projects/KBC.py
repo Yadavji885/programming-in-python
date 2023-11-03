@@ -14,7 +14,7 @@ class KBC:
             print(f"{self.name} is going with 0 money as reward")
             return afsos
         #question 2
-        print("Which planet is known as the Red Planet?\nnA) Jupiter\nB) Mars\nC) Venus\nD) Saturn")
+        print("Which planet is known as the Red Planet?\nA) Jupiter\nB) Mars\nC) Venus\nD) Saturn")
         answer2 = "Mars"
         ans2 = input("Enter the answer which you would like to lock:\n")
         if ans2 == answer2:
