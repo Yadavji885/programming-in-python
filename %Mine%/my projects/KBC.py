@@ -23,7 +23,7 @@ class KBC:
             afsos = print(f"You are wrong, The answer is {answer2}")
             print(f"{self.name} is going with 1000 money as reward")
             return afsos
-        #quetion 3
+        #question 3
         print("If a car travels at a constant speed of 60 miles per hour, how far will it travel in 3 hours?\nA) 30 miles\nB) 90 miles\nC) 120 miles\nD) 180 miles")
         answer3 = "120 miles"
         ans3 = input("Enter the answer which you would like to lock:\n")
