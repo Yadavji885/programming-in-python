@@ -859,7 +859,6 @@ class Binary_Converter:
             ans = hans1 + hans2
             print(f"{value} in decimal is {ans}")
 
-        if choice == 11: 
             v = input("Enter the number : \n")
             n = ""
             p = v.find(".")
@@ -945,10 +944,9 @@ class Binary_Converter:
                 pass
             else:
                 for e in range(2):
-                    temp3 = "0" + temp3
+                    temp3 = temp3 + "0"
                     if len(temp3)%3 == 0:
                         break
-            print(hans2)
             for f in range(len(temp3)):
                 temp4 = temp4 + temp3[f]
                 if len(temp4)%3 == 0:
@@ -964,10 +962,10 @@ class Binary_Converter:
                                 ans2 = ans2 + g
                     temp4 = ""
             ans = f"{ans1}.{ans2}"           
-            print(f"{v} in Binary is {ans}")
+            print(f"{v} in Octal is {ans}")
 
 Bc = Binary_Converter()
-print("1 : Decimal to Binary\n2 : Decimal to Octal\n3 : Decimal to HexaDecimal\n4 : Binary to Decimal\n5 : Binary to Octal\n6 : Binary to HexaDecimal\n7 : Octal to Decimal\n8 : Octal to Binary\n9 : Octal to HexaDecimal\n10 : Hexadecimal to Decimal\n11 : HexaDecimal to Bianry\n12 : HexaDecimal to Octal\n13 : For any Float type of value")
+print("1 : Decimal to Binary\n2 : Decimal to Octal\n3 : Decimal to HexaDecimal\n4 : Binary to Decimal\n5 : Binary to Octal\n6 : Binary to HexaDecimal\n7 : Octal to Decimal\n8 : Octal to Binary\n9 : Octal to HexaDecimal\n10 : Hexadecimal to Decimal\n11 : HexaDecimal to Binary\n12 : HexaDecimal to Octal\n13 : For any Float type of value")
 choice = int(input("Enter your choice (The numeric Value) :\n"))
 options = {
     1 : Bc.Decimal_to_Binary,
